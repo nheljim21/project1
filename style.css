@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #111;
+    color: #fafafa;
+}
+
+.moon-bg {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at top left, #222 60%, #191970 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 15px #91a3ff, 0 0 30px #191970;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #bfcfff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #191970;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    flex: 1 0 auto;
+}
+
+.moon-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(31, 31, 60, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.45);
+    padding: 36px 24px;
+    margin-bottom: 40px;
+    gap: 36px;
+}
+
+.moon-illustration {
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle at 70% 35%, #fff 65%, #c2c2c2 90%, #b2b2b2 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 60px 12px #bfcfff, 0 0 0 8px #191970 inset;
+    position: relative;
+}
+
+.moon-illustration::before,
+.moon-illustration::after {
+    content: '';
+    position: absolute;
+    background: rgba(200,200,200,0.5);
+    border-radius: 50%;
+}
+
+.moon-illustration::before {
+    width: 50px;
+    height: 50px;
+    left: 45px;
+    top: 30px;
+}
+
+.moon-illustration::after {
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    bottom: 55px;
+}
+
+.moon-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.moon-info h2 {
+    font-size: 2rem;
+    color: #99aaff;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.moon-info p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.moon-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.moon-info li {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    padding-left: 0;
+}
+
+.facts-section {
+    background: rgba(25, 25, 60, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    padding: 28px 20px;
+    margin-bottom: 40px;
+}
+
+.facts-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #99aaff;
+    font-size: 1.7rem;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.fact-card {
+    background: rgba(35, 35, 80, 0.85);
+    border-radius: 12px;
+    padding: 18px 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fact-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 4px 20px #99aaff66;
+}
+
+.fact-card h3 {
+    margin-top: 0;
+    color: #bfcfff;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+footer {
+    margin: 32px 0 20px 0;
+    text-align: center;
+    color: #bfcfff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 3px #191970;
+}
+
+@media (max-width: 700px) {
+    .moon-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 8px;
+    }
+    .moon-illustration {
+        margin-bottom: 16px;
+    }
+    main {
+        width: 100%;
+    }
+}

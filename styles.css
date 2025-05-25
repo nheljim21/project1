@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #090928;
+    color: #f5f7fa;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.stars, .shooting-stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.stars:before, .stars:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+}
+.stars {
+    background:
+        radial-gradient(white 1px, transparent 1px) 0 0/50px 50px repeat,
+        radial-gradient(white 1.5px, transparent 1.5px) 25px 25px/80px 80px repeat,
+        radial-gradient(#bfcfff 0.5px, transparent 0.5px) 15px 60px/100px 100px repeat;
+    opacity: 0.55;
+    animation: twinkle 3s infinite alternate;
+}
+@keyframes twinkle {
+    to { opacity: 0.8; }
+}
+
+.shooting-stars {
+    background: transparent;
+}
+.shooting-stars::before, .shooting-stars::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, #fff 0%, #fff0 100%);
+    opacity: 0.8;
+    top: 20%;
+    left: -120px;
+    border-radius: 4px;
+    animation: shoot 4s linear infinite;
+}
+.shooting-stars::after {
+    top: 60%;
+    animation-delay: 2s;
+}
+
+@keyframes shoot {
+    0% { left: -120px; opacity: 0; }
+    10% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { left: 110vw; opacity: 0; }
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 40px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.moon {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(ellipse at 70% 30%, #fff 60%, #bfcfff 90%, #b2b2b2 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 100px 10px #bfcfff, 0 0 0 20px #19197044 inset;
+    position: relative;
+    margin-bottom: 20px;
+    animation: moon-float 4s ease-in-out infinite alternate;
+}
+@keyframes moon-float {
+    from { transform: translateY(0px);}
+    to   { transform: translateY(-20px);}
+}
+
+.moon-glow {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #bfcfff33 0%, transparent 70%);
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.crater {
+    position: absolute;
+    background: #e3e3e3;
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow: 0 2px 6px 0 #19197033;
+}
+.crater1 { width: 40px; height: 28px; left: 70px; top: 65px; }
+.crater2 { width: 25px; height: 18px; left: 170px; top: 120px; }
+.crater3 { width: 30px; height: 22px; left: 120px; top: 200px; }
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 410px;
+}
+
+.hero-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.2rem;
+    color: #fff;
+    text-shadow: 0 0 30px #bfcfff, 0 0 20px #191970;
+    margin: 0 0 8px 0;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #bfcfff;
+    margin-bottom: 26px;
+    text-shadow: 0 0 10px #191970;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 36px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: #191970;
+    background: linear-gradient(90deg, #fff 60%, #99aaff 100%);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 18px #bfcfff44;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    letter-spacing: 2px;
+}
+.cta:hover {
+    background: linear-gradient(90deg, #99aaff 60%, #fff 100%);
+    color: #191970;
+    transform: scale(1.07);
+}
+
+.facts {
+    width: 100%;
+    margin-top: 40px;
+    background: rgba(31, 31, 60, 0.85);
+    border-radius: 18px;
+    padding: 36px 24px;
+    box-shadow: 0 4px 28px #19197055;
+    max-width: 870px;
+    text-align: center;
+}
+
+.facts h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #99aaff;
+    font-size: 2.1rem;
+    margin-bottom: 26px;
+}
+
+.facts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+}
+
+.fact-card {
+    background: rgba(35, 35, 80, 0.90);
+    border-radius: 13px;
+    padding: 20px 18px;
+    min-width: 185px;
+    max-width: 210px;
+    box-shadow: 0 2px 14px #99aaff33;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.fact-card:hover {
+    transform: scale(1.08) translateY(-8px);
+    box-shadow: 0 10px 30px #bfcfff77;
+    background: rgba(155, 170, 255, 0.18);
+}
+
+.fact-card h3 {
+    margin-top: 0;
+    color: #bfcfff;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+footer {
+    margin: 30px 0 20px 0;
+    text-align: center;
+    color: #bfcfff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 3px #191970;
+    z-index: 2;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 0 30px 0;
+    }
+    .moon {
+        margin-bottom: 0;
+    }
+    .facts { padding: 24px 8px; }
+}
+
+@media (max-width: 540px) {
+    .hero-text h1 { font-size: 2.1rem; }
+    .moon { width: 180px; height: 180px; }
+    .moon-glow { width: 250px; height: 250px; }
+    .facts h2 { font-size: 1.3rem; }
+}

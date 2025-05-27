@@ -11,17 +11,17 @@ A visually appealing landing page inspired by the theme of lunar exploration. Th
 - Clean and modern design
 - Responsive layout for desktop and mobile
 - Thematic visuals and engaging user experience
-- Semantic HTML and organized CSS
+- Semantic **HTML** and organized **CSS**
 
 ## 🌙 Tech Stack
 
-- **HTML5** (for structure)
-- **CSS3** (for styling)
-- **GitHub** (for version control and version control)
+- **HTML5** *(for structure)*
+- **CSS3** *(for styling)*
+- **GitHub** *(for version control and version control)*
 
 ## 📸 Screenshots
-![Moon Landing Page(1)](https://github.com/user-attachments/assets/68588d73-3c46-4674-b8c5-22d71cb80f1d)(![Moon Landing Page(2)](https://github.com/user-attachments/assets/6dd44e0d-2155-448b-a5ec-dbf54d9adb54)
-)
+![Moon Landing Page(1)](https://github.com/user-attachments/assets/68588d73-3c46-4674-b8c5-22d71cb80f1d)![Moon Landing Page(2)](https://github.com/user-attachments/assets/6dd44e0d-2155-448b-a5ec-dbf54d9adb54)
+
 
 <!-- Add screenshots of your landing page here if available -->
 <!-- Example: -->
@@ -50,4 +50,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Feel free to customize this README with more details or your own screenshots!
+Feel free to customize this **README** with more details or your own screenshots!
